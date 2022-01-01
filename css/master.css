@@ -1,0 +1,210 @@
+/*---------------------------------------------------------  Start Variables */
+:root {
+  --Main-Color: #aa1e1e;
+  --Auto-Margin: 50px;
+}
+/*-----------------------------------------------------------  End Variables */
+/*------------------------------------------------------  Start Global Rules */
+-webkit-box-sizing: border-box;
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+  transition: 1s;
+}
+body {
+  background-color: var(--Main-Color);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*-------------------------------------------------------  End Global Rules */
+/*-----------------------------------------------------------  Start Coding */
+/*-----------------------------------------------------------  Start Header */
+.header {
+  margin-top: var(--Auto-Margin);
+  margin-bottom: var(--Auto-Margin);
+}
+.header .container {
+  display: flex;
+}
+.header img {
+  width: 250px;
+  margin-right: var(--Auto-Margin);
+}
+.search-box {
+  background: black;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.search-box:hover > .search-txt {
+  width: 300px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background: var(--Main-Color);
+  color: black;
+}
+.search-btn {
+  color: var(--Main-Color);
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: var(--Main-Color);
+  font-size: 22px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0;
+  transition: 1s;
+}
+.search-txt::placeholder {
+  color: var(--Main-Color);
+}
+/*-------------------------------------------------------------  End Header */
+/*-------------------------------------------------------------  Start Body */
+.body .container {
+  margin-left: 40px;
+  margin-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  justify-items: center;
+  flex-wrap: wrap;
+}
+.body .container li {
+  position: relative;
+}
+.body .container li:hover h1 {
+  color: yellow;
+  transition: 3s;
+}
+.body .container li:hover {
+  z-index: 1;
+}
+.champ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+.champ .champ-image::before {
+  content: "";
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  background-color: yellow;
+  z-index: -1;
+  border-radius: 50%;
+}
+.body .container li:hover .champ-image::before {
+  background-color: var(--Main-Color);
+  transition: 3s;
+}
+.champ .champ-image {
+  position: relative;
+  border-radius: 50%;
+}
+.champ .champ-image img {
+  padding-left: 2px;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.champ > h1 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.champ-details {
+  position: relative;
+  visibility: hidden;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-Start;
+  top: -10px;
+  left: -60px;
+  width: 244px;
+  position: absolute;
+  background-color: black;
+  color: white;
+  z-index: -2;
+  border-radius: 25px;
+}
+.champ-details h2,
+.champ-details a {
+  align-self: center;
+  margin-top: 195px;
+}
+.body .container li:hover .champ-details {
+  visibility: visible;
+  animation: Fade-In 2s;
+}
+.champ-details a {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  color: var(--Main-Color);
+  text-decoration: underline;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.champ-details p {
+  margin-right: 5px;
+  margin-left: 5px;
+  line-height: 1.2;
+}
+.champ-details p span {
+  color: yellow;
+}
+.champ-details p span img {
+  margin-bottom: -4px;
+  margin-left: 3px;
+  margin-right: 5px;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+}
+/*---------------------------------------------------------------  End Body */
+/*-------------------------------------------------------  Start Animations */
+@keyframes Fade-In {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+/*---------------------------------------------------------  End Animations */
+/*-------------------------------------------------------------  End Coding */
