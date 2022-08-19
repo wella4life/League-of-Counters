@@ -103,11 +103,14 @@ ul {
   position: relative;
 }
 .body .container li:hover h1 {
-  color: yellow;
+  color: blue;
   transition: 3s;
 }
 .body .container li:hover {
   z-index: 1;
+  position: relative;
+  display: flex;
+  margin: -350px 100px 500px;
 }
 .champ {
   position: relative;
@@ -121,7 +124,7 @@ ul {
   position: absolute;
   width: 124px;
   height: 124px;
-  background-color: yellow;
+  background-color: blue;
   z-index: -1;
   border-radius: 50%;
 }
@@ -186,7 +189,7 @@ ul {
   line-height: 1.2;
 }
 .champ-details p span {
-  color: yellow;
+  color: blueviolet;
 }
 .champ-details p span img {
   margin-bottom: -4px;
