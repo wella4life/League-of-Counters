@@ -1,0 +1,66 @@
+/* Start Variables */
+:root {
+  --Main-Color: #aa1e1e;
+  --Auto-Margin: 50px;
+}
+/* End Variables */
+/* Start Global Rules */
+/* Fonts */
+font-family: "Pacifico", cursive;
+/* Fonts */
+-webkit-box-sizing: border-box;
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+  transition: 1s;
+}
+body {
+  background-color: var(--Main-Color);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Global Rules */
+/* Start Coding */
+/* Start Header */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: var(--Auto-Margin);
+}
+.logo > img {
+  margin-top: 3px;
+  width: 85px;
+  margin-right: 25px;
+}
+.logo > h1 {
+  color: rgba(0, 0, 0, 0.874);
+  font-family: "Pacifico", cursive;
+  font-weight: 700;
+  font-size: 35px;
+}
